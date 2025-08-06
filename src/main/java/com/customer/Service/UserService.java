@@ -74,4 +74,8 @@ public class UserService implements  UserContract{
     public void deleteUser(Long id) {
         userRespository.deleteById(id);
     }
+
+    public String UserMessage(){
+        return "Hello Random User";
+    }
 }

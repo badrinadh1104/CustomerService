@@ -54,4 +54,11 @@ public class UserController {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/Welcome")
+    public ResponseEntity<String> Welcome() {
+        String response = userService.UserMessage();
+        return ResponseEntity.ok(response);
+    }
+
+
 }
