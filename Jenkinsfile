@@ -5,6 +5,7 @@ pipeline {
         IMAGE_NAME = "badrinadh1104/customer-service"
         CONTAINER_NAME = "customer-service-app-container"
         DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
+        DOCKER_HOST = 'tcp://host.docker.internal:2375'  // Add this line
     }
 
     stages {
