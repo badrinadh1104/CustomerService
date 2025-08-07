@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+            githubPush() // For GitHub repositories
+        }
 
     environment {
         IMAGE_NAME = "badrinadh1104/customer-service"
