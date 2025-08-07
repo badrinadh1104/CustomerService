@@ -25,6 +25,11 @@ pipeline {
                 sh 'mvn test -Dspring.profiles.active=test'
             }
         }
+        stage('Verify Docker Setup') {
+            steps {
+                sh 'docker version'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
